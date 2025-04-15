@@ -110,7 +110,7 @@
   border-color: var(--bs-gray);
 }
 .form-control-dark:focus {
-  border-color: #fff;
+  border-color: #1D5972;
   box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
 }
 
@@ -128,5 +128,25 @@ body {
 .navbar {
   margin-bottom: 20px;
 }
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #e0e0e0 !important; /* optional: soft white on hover */
+}
+
+.logo {
+  width: 151px;
+  height: 48.17px;
+  margin-right: 0.5rem;
+}
+.navbar-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 
