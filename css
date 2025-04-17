@@ -147,6 +147,62 @@ body {
   height: auto;
   display: block;
 }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('svgs/png/1x/imagecombined.png'); /* Replace with your real image path */
+  background-repeat: no-repeat;
+  background-size: cover;        /* or contain if you want full image visible */
+  background-attachment: scroll; /* makes it scroll with the page */
+  background-position: top center;
+  height: 100vh;                 /* viewport height */
+}
+
+.main-scroll-area {
+  height: 3000px; /* Adjust this so you can scroll through the image */
+}
+.overlay-text {
+  position: absolute;
+  top: 248px; /* Y-coordinate */
+  left: 108px; /* X-coordinate */
+  text-align: left;
+  color: white;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+.overlay-text h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.overlay-text p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+.custom-button {
+  width: 255.88px;
+  height: 47px;
+  background-color: #1D5972; /* Nice ocean blue */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded corners, optional */
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif; /* Matches your site */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #174457; /* Darker on hover */
+}
+
+
 
 
 
