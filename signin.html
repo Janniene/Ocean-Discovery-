@@ -3,74 +3,207 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thin Navbar</title>
+    <title>Ocean Discovery - Login</title>
 
-    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/signin.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
-  body {
-    font-family: 'Poppins', sans-serif;
-  }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 100%; height: 100%;
+        font-family: 'Poppins', sans-serif;
+        background-color: #E4EFF2;
+        overflow-x: hidden;
+      }
 
-  .thin-header {
-    padding: 0.4rem 1rem;
-    background-color: #1D5972;
-    border-bottom: 1px solid #ddd;
-  }
+      .thin-header {
+        width: 100%;
+        padding: 0.4rem 1rem;
+        background-color: #1D5972;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
- .nav-link {
-  padding: 0.25rem 0.75rem;
-  font-size: 16px; /* updated to 16px */
-  color: white; /* Make the text white */
-}
+      .nav-link {
+        padding: 0.25rem 0.75rem;
+        font-size: 16px;
+        color: white;
+      }
 
-.nav-link:hover {
-  color: #ddd; /* Change the hover text color to a lighter shade */
-}
+      .nav-link:hover { color: #ddd; }
 
-.nav-link.active {
-  color: white; /* Ensure active state text color is also white */
-}
+      .navbar-brand {
+        font-weight: 600;
+        font-size: 1rem;
+      }
 
-  .navbar-brand {
-    font-weight: 600;
-    font-size: 1rem;
-  }
+      .logo {
+        width: 151px;
+        height: 30px;
+      }
 
-  .logo {
-    width: 151px;
-    height: 30px;
-    margin-right: 0.5rem;
-  }
-</style>
+      .overlay-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: calc(100vh - 60px);
+        padding-top: 60px;
+      }
 
+      .overlay-text h1 {
+        font-weight: 600;
+        font-size: 40px;
+        color: #113C56;
+        margin-bottom: 30px;
+      }
+
+      .custom-button {
+        width: 412px;
+        height: 37px;
+        background-color: white;
+        color: #D9D9D9;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        transition: 0.3s ease;
+      }
+
+      .custom-button:hover {
+        background-color: #174457;
+        color: white;
+        transform: scale(1.05);
+      }
+
+      .google-icon {
+        width: 34px;
+        height: 34px;
+        margin-right: 10px;
+      }
+
+      .stroke-line {
+        margin: 10px 0;
+      }
+
+      .email-label, .password-label {
+        font-size: 15px;
+        color: #0F4055;
+        align-self: flex-start;
+        margin-left: calc(50% - 206px);
+        margin-bottom: 5px;
+      }
+
+      .form-signin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .form-signin input[type="email"],
+      .form-signin input[type="password"] {
+        width: 412px;
+        height: 37px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 0 12px;
+        font-size: 16px;
+        color: #598398;
+      }
+
+      .sign-in-button {
+        width: 412px;
+        height: 37px;
+        background-color: #174457;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s ease;
+      }
+
+      .sign-in-button:hover {
+        background-color: #0F4055;
+        transform: scale(1.05);
+      }
+
+      .register-link {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #0F4055;
+      }
+
+      .register-link a {
+        color: #174457;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .register-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
-
+       <!-- add (..) to direct on a page  -->
   <body>
-    <header class="thin-header d-flex justify-content-between align-items-center">
-   
-
-      <!-- Left logo/brand -->
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="/svgs/logo.svg" alt="Logo" class="logo">
-        
+    <header class="thin-header">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <img src="../svgs/logo.svg" alt="Logo" class="logo">
       </a>
-
-      <!-- Right nav -->
       <ul class="nav">
-        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="../html/Aboutus.html" class="nav-link active">About Us</a></li>
+        <li class="nav-item"><a href="../html/Explore.html" class="nav-link">Explore</a></li>
+        <li class="nav-item"><a href="../html/resource.html" class="nav-link">Resources</a></li>
+        <li class="nav-item"><a href="../html/signin.html" class="nav-link">Login</a></li>
       </ul>
     </header>
 
-    <!-- Bootstrap JS -->
+    <div class="overlay-text">
+      <h1>Login</h1>
+
+      <button class="custom-button">
+        <img src="../svgs/google.svg" alt="Google Logo" class="google-icon">
+      </button>
+
+      <div class="stroke-line">
+        <svg width="413" height="10" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="5" x2="413" y2="5" stroke="white" stroke-width="2.99"/>
+        </svg>
+      </div>
+
+      <label for="email" class="email-label">Email</label>
+      <form class="form-signin">
+        <input type="email" id="email" placeholder="Your email">
+        
+        <label for="password" class="password-label">Password</label>
+        <input type="password" id="password" placeholder="*****">
+
+        <div class="stroke-line">
+          <svg width="413" height="10" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="5" x2="413" y2="5" stroke="white" stroke-width="2.99"/>
+          </svg>
+        </div>
+
+        <button class="sign-in-button" type="submit">Sign in</button>
+      </form>
+
+      <div class="register-link">
+        <p>Not a member? <a href="/html/register.html">Register here</a></p>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
