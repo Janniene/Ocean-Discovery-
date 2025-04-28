@@ -1,70 +1,426 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thin Navbar</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-  body {
-    font-family: 'Poppins', sans-serif;
-  }
+      html, body {
+        background-color: #F3FBFD;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-  .thin-header {
-    padding: 0.4rem 1rem;
-    background-color: #1D5972;
-    border-bottom: 1px solid #ddd;
-  }
+      .thin-header {
+        padding: 0.4rem 1rem;
+        background-color: #1d5972;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
- .nav-link {
-  padding: 0.25rem 0.75rem;
-  font-size: 16px; /* updated to 16px */
-  color: white; /* Make the text white */
-}
+      .nav-link {
+        padding: 0.25rem 0.75rem;
+        font-size: 1rem;
+        color: white;
+      }
 
-.nav-link:hover {
-  color: #ddd; /* Change the hover text color to a lighter shade */
-}
+      .nav-link:hover {
+        color: #ddd;
+      }
 
-.nav-link.active {
-  color: white; /* Ensure active state text color is also white */
-}
+      .nav-link.active {
+        color: white;
+      }
 
-  .navbar-brand {
-    font-weight: 600;
-    font-size: 1rem;
-  }
+      .navbar-brand {
+        font-weight: 600;
+        font-size: 1rem;
+      }
 
-  .logo {
-    width: 151px;
-    height: 30px;
-    margin-right: 0.5rem;
-  }
-</style>
+      .logo {
+        width: 9.44rem; /* 151px -> 9.44rem */
+        height: 1.88rem; /* 30px -> 1.88rem */
+        margin-right: 0.31rem; /* 5px -> 0.31rem */
+      }
 
+      /* Hero Section */
+      .hero-image {
+        background-image: url("images/hero1.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 60.06rem; /* 961px -> 60.06rem */
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 4rem;
+        align-items: center;
+      }
+
+      .hero-text {
+        color: white;
+        font-size: 4.25rem; /* 68px -> 4.25rem */
+        font-weight: 600;
+        z-index: 1;
+        margin-top: -12.5rem; /* -200px -> -12.5rem */
+        margin-left: 5.94rem; /* 95px -> 5.94rem */
+        text-align: left;
+      }
+
+      .body-text {
+        color: white;
+        font-size: 1.25rem; /* 20px -> 1.25rem */
+        font-weight: 200;
+        z-index: 1;
+        margin-top: 1.64rem; /* 70px -> 4.38rem */
+        max-width: 48%;
+        line-height: 1.5;
+        margin-left: -19.31rem; /* -309px -> -19.31rem */
+        text-align: left;
+      }
+
+      .content-section {
+        background-color: #F3FBFD;
+        padding: 6.25rem 0; /* 100px -> 6.25rem */
+      }
+
+      .subheading {
+        font-size: 3rem; /* 48px -> 3rem */
+        font-weight: 600;
+        color: #1d5972;
+        margin-bottom: -0.76rem; /* 20px -> 1.25rem */
+      }
+
+      .subheading-body-text {
+        color: #1d5972;
+        font-size: 1.125rem; /* 18px -> 1.125rem */
+        font-weight: 300;
+        max-width: 80%;
+        line-height: 1.6;
+        margin-top: 1.25rem; /* 20px -> 1.25rem */
+        text-align: left;
+      }
+
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 10rem; /* 160px -> 10rem */
+        margin-top: 3.13rem; /* 50px -> 3.13rem */
+      }
+
+      .card-image {
+        width: 156.25rem; /* 2500px -> 156.25rem */
+        height: auto;
+        display: inline-block;
+      }
+
+      .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .learn-more-link {
+        display: inline-block;
+        margin-top: 1.25rem; /* 20px -> 1.25rem */
+        font-size: 1.125rem; /* 18px -> 1.125rem */
+        color: #1d5972;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .learn-more-link:hover {
+        color: #104b89;
+        text-decoration: underline;
+      }
+
+      .stats-background {
+        background-color: #F3FBFD;
+        color: #1d5972;
+        padding: 3.75rem 0; /* 60px -> 3.75rem */
+        text-align: center;
+      }
+
+      .stats {
+        font-size: 0.625rem; /* 10px -> 0.625rem */
+        font-weight: 600;
+        margin-bottom: 1.88rem; /* 30px -> 1.88rem */
+      }
+
+      .stat-item {
+        display: inline-block;
+        margin: 0 5.63rem; /* 90px -> 5.63rem */
+        font-size: 4.38rem; /* 70px -> 4.38rem */
+        font-weight: 700;
+      }
+
+      .stat-description {
+        font-size: 1.125rem; /* 18px -> 1.125rem */
+        font-weight: 300;
+        color: #1d5972;
+        margin-top: 0.63rem; /* 10px -> 0.63rem */
+        text-align: center;
+      }
+
+      .stats-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1.88rem; /* 30px -> 1.88rem */
+      }
+
+      .stat-box {
+        margin: 0 3.13rem; /* 50px -> 3.13rem */
+      }
+
+      /* Vector Image Styles */
+      .vector-image-container {
+        width: 100%;
+        overflow: hidden; /* Hide anything that overflows */
+      }
+
+      .vector-image {
+        width: 100%; /* Make the image take full width */
+        height: auto; /* Maintain aspect ratio */
+      }
+
+      .team-card-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2.5rem; /* 40px -> 2.5rem */
+      }
+
+      .team-card {
+        width: 15.56rem; /* 249px -> 15.56rem */
+        height: 21.44rem; /* 343px -> 21.44rem */
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        position: relative; /* Allow absolute positioning inside */
+      }
+
+      .team-card-name {
+        position: absolute;
+        bottom: -18px; /* Position the name 10px from the bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1rem; /* 18px -> 1.125rem */
+          font-weight: 300px;
+          width: 90%;
+        color: white;
+      }
+        .team-card-title {
+        position: absolute;
+        bottom: -73px; /* Just below the name */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.8rem; /* Smaller font size for job titles */
+        font-weight: 300;
+            width: 90%;
+            height:3rem;
+        color: #ffff; /* Lighter font color */
+      }
+        
+        
+      /* Footer Section */
+      footer {
+        background-color: #003951;
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+      }
+
+      footer .footer-logo {
+        margin-bottom: 1rem;
+      }
+
+      footer .footer-links {
+        margin-bottom: 1rem;
+      }
+
+      footer .footer-links a {
+        color: white;
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      footer .footer-links a:hover {
+        color: #ddd;
+      }
+
+      footer .footer-text {
+        font-size: 0.875rem;
+        color: #ddd;
+      }
+
+    </style>
   </head>
 
   <body>
-  <!-- Header / Navbar -->
-<header class="thin-header">
-  <a class="navbar-brand d-flex align-items-center" href="../index.html">
-    <img src="svgs/logo.svg" alt="Logo" class="logo">
-  </a>
-  <!-- add (..) to direct on a page  -->
+    <!-- Header / Navbar -->
+    <header class="thin-header">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <img src="images/logo.svg" alt="Logo" class="logo"/>
+      </a>
 
-  <ul class="nav">
-    <li class="nav-item"><a href="../OceanDiscovery/html/Aboutus.html" class="nav-link active">About Us</a></li>
-    <li class="nav-item"><a href="../OceanDiscovery/html/Explore.html" class="nav-link">Explore</a></li>
-    <li class="nav-item"><a href="../OceanDiscovery/html/resource.html" class="nav-link">Resources</a></li>
-    <li class="nav-item"><a href="../OceanDiscovery/html/signin.html" class="nav-link">Login</a></li>
-  </ul>
-</header>
+      <ul class="nav ms-auto">
+        <li class="nav-item">
+          <a href="../OceanDiscovery/html/Aboutus.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="../OceanDiscovery/html/Explore.html" class="nav-link">Explore</a>
+        </li>
+        <li class="nav-item">
+          <a href="../OceanDiscovery/html/resource.html" class="nav-link">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a href="../OceanDiscovery/html/signin.html" class="nav-link">Login</a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Hero Image with Headline -->
+    <div class="hero-image">
+      <div class="hero-text">About Us</div>
+      <div class="body-text">
+        <p>
+          Ocean Discovery, your gateway to exploring the wonders of the ocean. Dive into our rich collection of
+          resources, research, and interactive tools designed to inspire marine enthusiasts and explorers alike.
+        </p>
+      </div>
+    </div>
+
+    <!-- Content Section Below Hero -->
+    <div class="content-section">
+      <div class="flex-container">
+        <div>
+          <div class="subheading">Our Story</div>
+          <div class="subheading-body-text">
+            <p>
+              Ocean Discovery Portal was founded by a group of marine biologists, educators, and tech innovators with a shared passion for ocean exploration. Recognizing the need for accessible, interactive resources, we aimed to bridge the gap between cutting-edge research and those eager to learn.
+            </p>
+          </div>
+          <a href="#" class="learn-more-link">LEARN MORE</a>
+        </div>
+
+        <div class="card-image">
+          <img src="images/card1.png" alt="Card Image" />
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <div>
+          <div class="subheading">Our Mission</div>
+          <div class="subheading-body-text">
+            <p>
+              Our mission at Ocean Discovery is to inspire ocean exploration, support marine research, promote conservation, and foster global awareness. We provide accessible resources to connect people with the wonders of the ocean.
+            </p>
+          </div>
+          <a href="#" class="learn-more-link">LEARN MORE</a>
+        </div>
+
+        <div class="card-image">
+          <img src="images/card2.png" alt="Card Image" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Background with Stats -->
+    <div class="stats-background">
+      <div class="stats-container">
+        <div class="stat-box">
+          <div class="stat-item">650+</div>
+          <div class="stat-description">Marine Species Cataloged</div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-item">200+</div>
+          <div class="stat-description">Research Papers Shared</div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-item">10k+</div>
+          <div class="stat-description">Global Community Members</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Team Overlaid on Image, Left-Aligned -->
+    <div class="vector-image-container" style="position: relative; color: #1d5972;">
+      <img src="images/Rectangle%20110.png" alt="Vector Image" class="vector-image" />
+      <div style="
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        text-align: left;
+        width: 80%; /* Container width adjusted to prevent cards from touching the edge */
+        padding: 0 5%; /* Added padding on both sides to create even space */
+      ">
+        <div class="subheading" style="color: white;">Our Team</div>
+        <div class="subheading-body-text" style="color: white; font-size: 1.125rem; font-weight: 200; max-width: 60%; line-height: 1.6; margin-top: 0.63rem;">
+          <p>Meet the founders of Ocean Discovery, a team of passionate marine scientists, educators, and tech experts dedicated to advancing ocean research and conservation.</p>
+        </div>
+
+      
+        <!-- Card Images beneath the "Our Team" section -->
+        <div class="team-card-container">
+          <!-- Card 1 -->
+          <div class="team-card" style="background-image: url('images/hya.png');">
+            <div class="team-card-name">Hyacinth Talbo</div>
+            <div class="team-card-title">Marine Biologist</div>
+          </div>
+          <!-- Card 2 -->
+          <div class="team-card" style="background-image: url('images/zeke.png');">
+            <div class="team-card-name">Ezekiel Teves</div>
+            <div class="team-card-title">Environmental Scientist</div>
+          </div>
+          <!-- Card 3 -->
+          <div class="team-card" style="background-image: url('images/gan.png');">
+            <div class="team-card-name">Chern Siang Gan</div>
+            <div class="team-card-title">Ocean Data Analyst</div>
+          </div>
+          <!-- Card 4 -->
+          <div class="team-card" style="background-image: url('images/jan.png');">
+            <div class="team-card-name">Janniene Cortez</div>
+            <div class="team-card-title">Coral Reef Specialist</div>
+          </div>
+        </div>
+      </div>
+    </div>
+       <!-- Footer Section -->
+    <footer>
+      <div class="footer-logo">
+        <img src="images/logo.svg" alt="Ocean Discovery Logo" class="logo" />
+      </div>
+      <div class="footer-links">
+        <a href="../OceanDiscovery/html/Aboutus.html">About Us</a>
+        <a href="../OceanDiscovery/html/Explore.html">Explore</a>
+        <a href="../OceanDiscovery/html/resource.html">Resources</a>
+        <a href="../OceanDiscovery/html/signin.html">Login</a>
+      </div>
+      <div class="footer-text">
+        &copy; 2025 Ocean Discovery. All Rights Reserved.
+      </div>
+    </footer>
 
 
     <!-- Bootstrap JS -->
